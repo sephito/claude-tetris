@@ -12,7 +12,7 @@ Open `index.html` directly, or serve statically (e.g. `python -m http.server 800
 
 ## Architecture
 
-All logic lives in `game.js` (one classic script, `'use strict'`, global state, no modules). `index.html` supplies the DOM ids it looks up at the top of the file (`board`, `next-canvas`, `score`, `lines`, `level`, `overlay`, `overlay-title`, `overlay-score`, `restart-btn`); renaming any id requires updating `game.js`.
+All logic lives in `game.js` (one classic script, `'use strict'`, global state, no modules). `index.html` supplies the DOM ids it looks up at the top of the file (`board`, `next-canvas`, `score`, `lines`, `level`, `overlay`, `overlay-title`, `overlay-score`, `restart-btn`, `theme-toggle`); renaming any id requires updating `game.js`.
 
 - Board is a `ROWS×COLS` matrix of `0` or a piece-type index 1–7; the same index selects the entry in `COLORS` and `PIECES` (index 0 is `null` in both).
 - State is module-level `let` variables, reset in `init()`. `restartBtn` calls `init()`.
